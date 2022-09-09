@@ -1,7 +1,7 @@
 {
   "name": "employeetracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "![Github licence](http://img.shields.io/badge/license-none-success.svg)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,5 +20,6 @@
   "homepage": "https://github.com/TommyBspeed/employeeTracker#readme",
   "dependencies": {
     "dotenv": "^16.0.2"
-  }
+  },
+  "devDependencies": {}
 }
