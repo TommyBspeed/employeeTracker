@@ -2,7 +2,6 @@
 const mysql = require("mysql2");
 // import inquirer
 const inquirer = require("inquirer");
-const { allowedNodeEnvironmentFlags, title } = require("process");
 
 //set dontenv to keep password secure.
 require("dotenv").config();
@@ -205,7 +204,7 @@ addRole = () => {
       connection.promise().query(roleSql, (err, data) => {
         if (err) throw err;
 
-        const dept = data.map(({ mane, id }) => ({ name: name, value: id }));
+        const dept = data.map(({ name, id }) => ({ name: name, value: id }));
 
         inquirer
           .prompt([
