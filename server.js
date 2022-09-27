@@ -566,7 +566,7 @@ viewBudget = () => {
     FROM role
     JOIN department ON role.department_id = department.id GROUP BY department_id`;
 
-  connection.promie().query(sql, (err, rows) => {
+  connection.promise().query(sql, (err, rows) => {
     if (err) throw err;
     console.log(rows);
 
