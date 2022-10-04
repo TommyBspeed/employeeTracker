@@ -1,17 +1,27 @@
-const Sequelize = require("sequelize");
+// const Sequelize = require("sequelize");
 require("dotenv").config();
 
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_PASSWORD,
-  process.env.DB_USER,
+const mysql = require("mysql2");
 
-  {
-    host: "localhost",
-    dialect: "mysql2",
-    port: 3001,
-    // was 3306
-  }
-);
+const connection = mysql.createConnection({
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  password: process.env.DB_PASSWORD,
+  database: "employee_db",
+});
 
-module.exports = sequelize;
+module.exports = connection;
+// const sequelize = new Sequelize(
+//   process.env.DB_NAME,
+//   process.env.DB_PASSWORD,
+//   process.env.DB_USER,
+
+//   {
+//     host: "localhost",
+//     dialect: "mysql2",
+//     port: 3306,
+//   }
+// );
+
+// module.exports = sequelize;
